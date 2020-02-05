@@ -60,11 +60,11 @@ function loadMLRuntime() {
   updateSelectBox(backendName, backend);
 
   if(library == 'OpenCV.js') {
-    asyncLoadScript(`../opencv.js/${backend}/opencv.js`, onOpenCvReady);
+    asyncLoadScript(`./opencv.js/${backend}/opencv.js`, onOpenCvReady);
     setSelectOption(backendName, 'SIMD', 'show');
     setSelectOption(backendName, 'Threads+SIMD', 'show');
   } else if(library == 'ONNX.js') {
-    asyncLoadScript('../onnx.js/onnx.min.js', onOnnxjsReady);
+    asyncLoadScript('./onnx.js/onnx.min.js', onOnnxjsReady);
     setSelectOption(backendName, 'SIMD', 'hide');
     setSelectOption(backendName, 'Threads+SIMD', 'hide');
   } else {
