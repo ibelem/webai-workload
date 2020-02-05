@@ -1,19 +1,19 @@
 const modelZoo = [{
   name: 'squeezenet',
-  path: '../model/squeezenet.onnx',
-  label: '../model/labels1000.txt'
+  path: 'https://webaimodel.s3-us-west-2.amazonaws.com/onnx/squeezenet.onnx',
+  label: './model/labels1000.txt'
 }, {
   name: 'mobilenetv2',
-  path: '../model/mobilenetv2.onnx',
-  label: '../model/labels1000.txt'
+  path: 'https://webaimodel.s3-us-west-2.amazonaws.com/onnx/mobilenetv2.onnx',
+  label: './model/labels1000.txt'
 }, {
   name: 'resnet50v1',
-  path: '../model/resnet50v1.onnx',
-  label: '../model/labels1000.txt'
+  path: 'https://webaimodel.s3-us-west-2.amazonaws.com/onnx/resnet50v1.onnx',
+  label: './model/labels1000.txt'
 }, {
   name: 'resnet50v2',
-  path: '../model/resnet50v2.onnx',
-  label: '../model/labels1000.txt'
+  path: 'https://webaimodel.s3-us-west-2.amazonaws.com/onnx/resnet50v2.onnx',
+  label: './model/labels1000.txt'
 }];
 
 /*************************   UI.js   **************************/
@@ -26,9 +26,9 @@ function updatInnerHTML(Element, value) {
 // Update status picture.
 function updateStatusPicture(imgElement, status) {
   if(status == 1) {
-    imgElement.src = '../icon/loaded.png';
+    imgElement.src = './icon/loaded.png';
   } else {
-    imgElement.src = '../icon/loading.png';
+    imgElement.src = './icon/loading.png';
   }
 }
 
