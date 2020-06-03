@@ -81,7 +81,8 @@ function getInputMat() {
     cv.cvtColor(mat, matC3, cv.COLOR_RGBA2RGB);
     let matdata = matC3.data;
     let stddata = [];
-    for(var i=0; i<mat.matSize[0]*mat.matSize[1]; ++i) {
+    let matSize = mat.matSize[0]*mat.matSize[1];
+    for(var i = 0; i < matSize; ++i) {
       stddata.push((matdata[3*i]/255-0.485)/0.229); 
       stddata.push((matdata[3*i+1]/255-0.456)/0.224);
       stddata.push((matdata[3*i+2]/255-0.406)/0.225);
